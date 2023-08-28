@@ -57,11 +57,6 @@ ee.emit('logger', {
 ```
 
 
-## Team
-
-[<img src="https://avatars.githubusercontent.com/u/130963?s=390" alt="Lagden" width="90">](https://github.com/lagden)
-
-
 ## Donate ❤️
 
 - BTC: bc1q7famhuj5f25n6qvlm3sssnymk2qpxrfwpyq7g4
