@@ -7,11 +7,10 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@types/node':
         specifier: 22.5.4
         version: 22.5.4
-    devDependencies:
       c8:
         specifier: 10.1.2
         version: 10.1.2

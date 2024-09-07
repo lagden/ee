@@ -20,8 +20,7 @@
     "event",
     "emitter",
     "ee",
-    "singleton",
-    "nodejs"
+    "singleton"
   ],
   "author": "Thiago Lagden",
   "license": "MIT",
@@ -30,13 +29,12 @@
   },
   "scripts": {
     "tsc": "tsc",
+    "pretest": "npm run tsc",
     "test": "c8 --reporter=text --reporter=text-summary --reporter=lcovonly --reporter=cobertura node --test test/*.spec.js",
-    "prepublishOnly": "npm test && npm run tsc"
-  },
-  "dependencies": {
-    "@types/node": "22.5.4"
+    "prepublishOnly": "npm test"
   },
   "devDependencies": {
+    "@types/node": "22.5.4",
     "c8": "10.1.2",
     "p-event": "6.0.1",
     "typescript": "5.5.4"

@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { pEventMultiple } from 'p-event'
-import ee, { Singleton } from '../src/ee.js'
+import ee, { immutableSingleton, KEY } from '../src/ee.js'
 
 test('ee', async () => {
 	const promise = pEventMultiple(ee, 'test', {
@@ -16,14 +16,20 @@ test('ee', async () => {
 	assert.equal(result[0], 'ok')
 })
 
-test('Singleton', () => {
-	assert.equal(ee, Singleton.instance)
+test('singleton', () => {
+	assert.equal(ee, immutableSingleton[KEY])
 })
 
 test('error', () => {
 	assert.throws(() => {
-		new Singleton()
+		immutableSingleton[KEY] = 123
 	}, {
-		message: 'Cannot construct singleton',
+		message: 'Cannot set property, object is immutable.',
+	})
+
+	assert.throws(() => {
+		delete immutableSingleton[KEY]
+	}, {
+		message: 'Cannot delete property, object is immutable.',
 	})
 })
