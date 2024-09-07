@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "target": "ES2023",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "./src"
+  },
+  "include": ["./src/**/*.js"],
+  "exclude": ["./src/**/*.d.ts", "./node_modules"]
+}

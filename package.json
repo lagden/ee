@@ -1,18 +1,20 @@
 {
   "name": "@tadashi/ee",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "EventEmitter Singleton",
   "type": "module",
-  "main": "./src/ee.js",
   "files": [
     "src",
     "LICENSE",
     "README.md"
   ],
-  "scripts": {
-    "eslint": "eslint --ignore-path .gitignore .",
-    "pretest": "npm run eslint",
-    "test": "c8 --reporter=text --reporter=lcov ava"
+  "main": "./src/ee.js",
+  "types": "./src/ee.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/ee.js",
+      "types": "./src/ee.d.ts"
+    }
   },
   "keywords": [
     "event",
@@ -24,13 +26,19 @@
   "author": "Thiago Lagden",
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "c8 --reporter=text --reporter=text-summary --reporter=lcovonly --reporter=cobertura node --test test/*.spec.js",
+    "prepublishOnly": "npm test && npm run tsc"
+  },
+  "dependencies": {
+    "@types/node": "22.5.4"
   },
   "devDependencies": {
-    "ava": "5.3.1",
-    "c8": "8.0.1",
-    "eslint": "8.48.0",
-    "eslint-plugin-unicorn": "48.0.1",
-    "p-event": "6.0.0"
+    "c8": "10.1.2",
+    "p-event": "6.0.1",
+    "typescript": "5.5.4"
   }
 }
