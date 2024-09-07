@@ -20,33 +20,26 @@ EventEmitter Singleton
 $ npm i @tadashi/ee
 ```
 
-## Environment Variables
-
-⚠️ **Warning**
-
-> You must set the environment variables `APP_NS`\
-> Default is: `@tadashi`
-
 ## Usage
 
 ```js
 // log.js
-import ee from "@tadashi/ee";
+import ee from '@tadashi/ee'
 
 function _log(data) {
-  console.log(data);
+  console.log(data)
 }
 
-ee.on("logger", _log);
+ee.on('logger', _log)
 
 // ---
 
 // app.js
-import ee from "@tadashi/ee";
+import ee from '@tadashi/ee'
 
-ee.emit("logger", {
-  message: "apenas um show",
-});
+ee.emit('logger', {
+  message: 'apenas um show',
+})
 ```
 
 ## Donate ❤️
