@@ -42,9 +42,9 @@ ee.emit('logger', {
 })
 ```
 
-## Donate ❤️
+## Buy Me a Coffee
 
-- BTC: bc1q7famhuj5f25n6qvlm3sssnymk2qpxrfwpyq7g4
+BTC: bc1q7famhuj5f25n6qvlm3sssnymk2qpxrfwpyq7g4
 
 ## License
 
