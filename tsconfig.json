@@ -7,8 +7,8 @@
     "emitDeclarationOnly": true,
     "allowJs": true,
     "checkJs": true,
-    "outDir": "./src"
+    "outDir": "./types"
   },
   "include": ["./src/**/*.js"],
-  "exclude": ["./src/**/*.d.ts", "./node_modules"]
+  "exclude": ["./types/**/*.d.ts"]
 }

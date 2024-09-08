@@ -5,15 +5,16 @@
   "type": "module",
   "files": [
     "src",
+    "types",
     "LICENSE",
     "README.md"
   ],
   "main": "./src/ee.js",
-  "types": "./src/ee.d.ts",
+  "types": "./types/ee.d.ts",
   "exports": {
     ".": {
       "import": "./src/ee.js",
-      "types": "./src/ee.d.ts"
+      "types": "./types/ee.d.ts"
     }
   },
   "keywords": [
